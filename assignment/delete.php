@@ -1,11 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration";
-  
-// connect the database with the server
-$conn = new mysqli($servername,$username,$password,$dbname);
+include_once 'connect.php';
 
 $sql = "DELETE FROM data WHERE id='" .$_GET["id"] . "'";
 if (mysqli_query($conn, $sql)) {

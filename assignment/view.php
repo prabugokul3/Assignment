@@ -1,9 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration";
-$conn = new mysqli($servername,$username,$password,$dbname);
+include_once 'connect.php';s
   
   
 $result=mysqli_query($conn,"SELECT * FROM  data");

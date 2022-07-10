@@ -1,12 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration";
-  
-// connect the database with the server
-$conn = new mysqli($servername,$username,$password,$dbname);
+include_once 'connect.php';
    if(count($_POST)>0) {
 mysqli_query($conn,"UPDATE data set id='" . $_POST['id'] . "', firstname='" . $_POST['firstname'] . "', lastname='" . $_POST['lastname'] . "',email='" . $_POST['email'] . "',mobilenumber='".$_POST['mobilenumber']."' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
